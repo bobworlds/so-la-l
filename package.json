@@ -12,7 +12,10 @@
   },
   "prettier": "@shopify/prettier-config",
   "dependencies": {
+    "@react-spring/parallax": "^9.7.3",
+    "@react-spring/web": "^9.7.3",
     "@remix-run/react": "2.1.0",
+    "@remix-run/server-runtime": "^2.1.0",
     "@shopify/cli": "3.50.0",
     "@shopify/cli-hydrogen": "^6.0.0",
     "@shopify/hydrogen": "^2023.10.0",
@@ -21,7 +24,11 @@
     "graphql-tag": "^2.12.6",
     "isbot": "^3.6.6",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.18.0",
+    "react-router-hash-link": "^2.4.3",
+    "react-spring": "^9.7.3",
+    "sass": "^1.69.5"
   },
   "devDependencies": {
     "@remix-run/dev": "2.1.0",

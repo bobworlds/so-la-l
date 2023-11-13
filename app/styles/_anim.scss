@@ -1,0 +1,10 @@
+@keyframes changeBtn {
+    from {
+        display: none;
+        opacity: 0;
+    }
+    to {
+        display: block;
+        opacity: 1;
+    }
+}

@@ -2,6 +2,8 @@ import {defer} from '@shopify/remix-oxygen';
 import {Await, useLoaderData, Link} from '@remix-run/react';
 import {Suspense} from 'react';
 import {Image, Money} from '@shopify/hydrogen';
+import ParallaxBan from "../components/ParallaxBan"
+import ParallaxBanD from '~/components/ParallaxBanD';
 
 /**
  * @type {MetaFunction}
@@ -27,11 +29,17 @@ export default function Homepage() {
   const data = useLoaderData();
   return (
     <div className="home">
-      <FeaturedCollection collection={data.featuredCollection} />
-      <RecommendedProducts products={data.recommendedProducts} />
+     {/* <FeaturedCollection collection={data.featuredCollection} />
+      <RecommendedProducts products={data.recommendedProducts} />  */}
+        <ParallaxBan />
+        <ParallaxBanD />
+
     </div>
   );
 }
+
+
+
 
 /**
  * @param {{

@@ -1,0 +1,65 @@
+.parallaxD {
+    display: none;
+    z-index: 10;
+    position: absolute;
+    bottom: 0;
+    @include desktop {
+        display: block;
+    }
+    &__btn {
+        border-radius: 30px;
+        padding: 5px 20px;
+        width: fit-content;
+        text-align: center;
+        position: relative;
+        text-align: center;
+        display: flex;
+        &:hover {
+            img {
+                transition: 1s;
+                opacity: 1;
+            }
+            p {
+                transition: 1s;
+                opacity: 0;
+            }
+        }
+
+        &--icon {
+            width: fit-content;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            opacity: 0;
+        }
+    }
+    &__layer {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        &.logo {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            max-width: 300px;
+            height: 100vh !important;
+            .hide {
+                overflow: hidden;
+            }
+        }
+        &--img {
+            width: 100%;
+            height: 100%;
+            &--logo {
+            }
+            &--3 {
+                width: 50%;
+                padding-left: 40%;
+            }
+        }
+    }
+}
