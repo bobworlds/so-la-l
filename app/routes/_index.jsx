@@ -4,6 +4,8 @@ import {Suspense} from 'react';
 import {Image, Money} from '@shopify/hydrogen';
 import ParallaxBan from "../components/ParallaxBan"
 import ParallaxBanD from '~/components/ParallaxBanD';
+import Pictures from '~/components/pictures';
+import Water from '~/components/Water';
 
 /**
  * @type {MetaFunction}
@@ -33,6 +35,8 @@ export default function Homepage() {
       <RecommendedProducts products={data.recommendedProducts} />  */}
         <ParallaxBan />
         <ParallaxBanD />
+        <Pictures />
+        <Water />
 
     </div>
   );

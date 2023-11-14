@@ -1,0 +1,36 @@
+.conteneur_global {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.all_item {
+    width: 33.33%; 
+    text-align: center;
+    margin: 0;
+    padding: 0; 
+}
+
+.img_solo {
+    width: 100%;
+    padding-right: 4%;
+    padding-left: 4%;
+    box-sizing: border-box;
+}
+
+.img_solo:hover {
+    transform: scale(1.15); 
+    transition: 0.7s;
+}
+
+.compteur {
+    color: #fff;
+    margin-bottom: 4%;
+}
+
+@media screen and (max-width: 767px) {
+    .all_item {
+        width: 100%; 
+    }
+}

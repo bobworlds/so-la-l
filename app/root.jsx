@@ -16,7 +16,10 @@ import favicon from '../public/favicon.svg';
 import resetStyles from './styles/reset.css';
 import appStyles from './styles/app.css';
 import {Layout} from '~/components/Layout';
-import sassStyle from "./styles/style.css"
+import sassStyle from "./styles/style.css";
+import picStyles from './styles/pictures.css';
+import waterStyles from './styles/water.css';
+
 /**
  * This is important to avoid re-fetching root queries on sub-navigations
  * @type {ShouldRevalidateFunction}
@@ -40,6 +43,8 @@ export function links() {
     {rel: 'stylesheet', href: resetStyles},
     {rel: 'stylesheet', href: appStyles},
     {rel: 'stylesheet', href: sassStyle},
+    {rel: 'stylesheet', href: picStyles},
+    {rel: 'stylesheet', href: waterStyles},
     {
       rel: 'preconnect',
       href: 'https://cdn.shopify.com',
