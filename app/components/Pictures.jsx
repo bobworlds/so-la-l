@@ -4,7 +4,7 @@ import imageData from '../datas/images.json';
 function Pictures() {
 
     const imageLinks = [
-        "https://example.com/image1",
+        "./products/8667777040715",
         "https://example.com/image2",
         "https://example.com/image3",
         "https://example.com/image4",
@@ -28,7 +28,7 @@ function Pictures() {
     return (
         <div className='conteneur_global'>
             {renderImages()}
-        </div>
+        </div>    
     );
 }
 

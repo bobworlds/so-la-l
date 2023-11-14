@@ -1,9 +1,17 @@
+.picturesLayer{
+    z-index: 10;
+    margin-top: 100%;
+    position: absolute;
+    top:100vh;
+    bottom: 0;
+  }
+  
 .conteneur_global {
     width: 60%;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
-    
+
     top:100%;
     position: absolute;
     bottom: 0;

@@ -7,6 +7,7 @@ import Drop from '../images/Vector.svg'
 import React, { useRef, useState } from "react";
 import {Link} from 'react-router-dom'
 import { HashLink } from "react-router-hash-link";
+import Pictures from "./Pictures";
 
 
 const ParallaxBan = () => {
@@ -36,6 +37,11 @@ const ParallaxBan = () => {
           </a>
       </ParallaxLayer>      
       <section id="par">
+{/* 
+      <ParallaxLayer offset={0} speed={0} className="picturesLayer" >
+        <Pictures />
+      </ParallaxLayer>  
+*/}
       <ParallaxLayer offset={1.25} speed={0.5} className="parallax__layer ">
         <img src={Bat1} alt="" className="parallax__layer--img parallax__layer--img--1" />
       </ParallaxLayer>      
@@ -47,8 +53,6 @@ const ParallaxBan = () => {
       </ParallaxLayer>
 
       </section>
-     
-
     </Parallax>
   )
 }

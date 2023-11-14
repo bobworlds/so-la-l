@@ -13,9 +13,6 @@ body {
     background-color: black;
     color: $wh;
     scroll-behavior: smooth;
-    background-image: url("../images/mobile/sky.png");
-    background-size: cover;
-    background-attachment: fixed;
 }
 
 main {
@@ -25,4 +22,11 @@ main {
         content: "";
         display: block;
     }
+}
+
+#par{
+    background-image: url("../images/mobile/sky.png");
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
 }

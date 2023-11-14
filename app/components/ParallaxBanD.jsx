@@ -5,6 +5,8 @@ import Logo from '../images/logo.png'
 import Drop from '../images/Vector.svg'
 import React, { useRef, useState } from "react";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
+import Pictures from './Pictures'
+import Water from './Water'
 
 
 function ParallaxBanD() {
@@ -34,7 +36,12 @@ function ParallaxBanD() {
             </div>
             </a>
         </ParallaxLayer>      
-        <section id="par">
+        <section id="par" onClick={handleClick}>
+        <Water>
+    {/*  
+        <ParallaxLayer offset={0} speed={0} className="picturesLayer" >
+          <Pictures />
+        </ParallaxLayer> */} 
         <ParallaxLayer offset={1.25} speed={0.5} className="parallaxD__layer ">
           <img src={Bat1D} alt="" className="parallaxD__layer--img parallax__layer--img--1" />
         </ParallaxLayer>      
@@ -44,7 +51,7 @@ function ParallaxBanD() {
         <ParallaxLayer offset={1.5} speed={0} className="parallax__layer">
           <img src={PanneauD} alt="" className="parallaxD__layer--img parallax__layer--img--3" />
         </ParallaxLayer>
-  
+  </Water>
         </section>
        
   
