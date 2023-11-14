@@ -8,7 +8,7 @@ import Pictures from '~/components/pictures';
 import Water from '~/components/Water';
 
 /**
- * @type {MetaFunction}
+ * @type {MetaFunction} 
  */
 export const meta = () => {
   return [{title: 'Hydrogen | Home'}];
