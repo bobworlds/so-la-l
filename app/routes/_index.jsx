@@ -4,7 +4,7 @@ import {Suspense} from 'react';
 import {Image, Money} from '@shopify/hydrogen';
 import ParallaxBan from "../components/ParallaxBan"
 import ParallaxBanD from '~/components/ParallaxBanD';
-import Pictures from '~/components/pictures';
+import Pictures from '~/components/Pictures';
 import Water from '~/components/Water';
 
 /**
