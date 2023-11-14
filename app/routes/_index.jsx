@@ -37,7 +37,7 @@ export default function Homepage() {
         <ParallaxBanD />
         <Pictures />
         <Water />
-
+        
     </div>
   );
 }
