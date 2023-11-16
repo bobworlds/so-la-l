@@ -115,9 +115,9 @@ export default function Homepage() {
         ></video>
       ))}
 
-      <video autoPlay loop playsInline muted id="rain">
+      {/* <video autoPlay loop playsInline muted id="rain">
         <source src={Rain} type="mp4" />
-      </video>
+      </video> */}
 
       {/* <FeaturedCollection collection={data.featuredCollection} />
       <RecommendedProducts products={data.recommendedProducts} />  */}
