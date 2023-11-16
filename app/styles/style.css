@@ -105,20 +105,15 @@ main::after {
 }
 @media screen and (min-width: 768px) {
   .container {
-    padding: unset;
+    max-width: unset;
+    padding: 0 auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 15px;
     grid-row-gap: 15px;
-    max-width: 800px;
   }
   .container::-webkit-scrollbar {
     display: none;
-  }
-}
-@media screen and (min-width: 992px) {
-  .container {
-    max-width: 1000px;
   }
 }
 
