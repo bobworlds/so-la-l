@@ -2,6 +2,12 @@ import {Await, NavLink} from '@remix-run/react';
 import {Suspense} from 'react';
 import {useRootLoaderData} from '~/root';
 import Cart from '../images/cart.svg';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {
+  faCartShopping,
+  faUser,
+  faUserAlt,
+} from '@fortawesome/free-solid-svg-icons';
 /**
  * @param {HeaderProps}
  */
@@ -86,7 +92,11 @@ function HeaderCtas({isLoggedIn, cart}) {
     <nav className="header-ctas" role="navigation">
       {/* <HeaderMenuMobileToggle /> */}
       <NavLink prefetch="intent" to="/account" style={activeLinkStyle}>
-        {isLoggedIn ? 'Compte' : 'Se connecter'}
+        {isLoggedIn ? (
+          <FontAwesomeIcon icon={faUser} />
+        ) : (
+          <FontAwesomeIcon icon={faUserAlt} />
+        )}
       </NavLink>
       {/* <SearchToggle /> */}
       <CartToggle cart={cart} />
@@ -112,7 +122,7 @@ function SearchToggle() {
 function CartBadge({count}) {
   return (
     <a href="#cart-aside">
-      <img src={Cart} alt="" />
+      <FontAwesomeIcon icon={faCartShopping} />
       {count}
     </a>
   );

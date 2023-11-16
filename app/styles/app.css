@@ -312,7 +312,6 @@ aside li {
 }
 
 .featured-collection-image {
-  aspect-ratio: 1 / 1;
   @media (min-width: 45em) {
     aspect-ratio: 16 / 9;
   }
@@ -358,6 +357,7 @@ aside li {
 * routes/collections.$handle.tsx
 * --------------------------------------------------
 */
+
 .collection-description {
   margin-bottom: 1rem;
   max-width: 95%;
@@ -368,6 +368,7 @@ aside li {
 
 .products-grid {
   display: grid;
+
   grid-gap: 1.5rem;
   grid-template-columns: repeat(auto-fit, minmax(var(--grid-item-width), 1fr));
   margin-bottom: 2rem;
@@ -385,7 +386,11 @@ aside li {
 */
 .product {
   display: grid;
+  max-width: 400px;
+  margin: 50px auto;
   @media (min-width: 45em) {
+    margin: 30vh auto;
+    max-width: 1000px;
     grid-template-columns: 1fr 1fr;
     grid-gap: 4rem;
   }
