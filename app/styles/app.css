@@ -18,7 +18,7 @@ img {
 * --------------------------------------------------
 */
 aside {
-  background: var(--color-light);
+  background: black;
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
   height: 100vh;
   max-width: var(--aside-width);
@@ -61,6 +61,8 @@ aside header h2 {
 
 aside main {
   margin: 1rem;
+  background-color: black !important;
+  background-image: unset;
 }
 
 aside p {
@@ -116,6 +118,8 @@ aside li {
   opacity: 1;
   pointer-events: auto;
   visibility: visible;
+  position: relative;
+  z-index: 100;
 }
 /* reveal aside */
 .overlay:target aside {
@@ -182,6 +186,8 @@ aside li {
   background: var(--color-dark);
   margin: auto;
   font-size: small;
+  position: relative;
+  z-index: 40;
 }
 
 .footer-menu-missing {

@@ -248,10 +248,7 @@ export function CartEmpty({hidden = false, layout = 'aside'}) {
   return (
     <div hidden={hidden}>
       <br />
-      <p>
-        Looks like you haven&rsquo;t added anything yet, let&rsquo;s get you
-        started!
-      </p>
+      <p>Panier vide</p>
       <br />
       <Link
         to="/collections"
@@ -261,7 +258,7 @@ export function CartEmpty({hidden = false, layout = 'aside'}) {
           }
         }}
       >
-        Continue shopping →
+        Continuer vos achats →
       </Link>
     </div>
   );

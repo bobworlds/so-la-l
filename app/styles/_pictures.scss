@@ -26,6 +26,9 @@
     grid-row-gap: 10px;
     margin: 0 auto;
     max-width: 800px;
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 }
 
