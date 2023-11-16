@@ -46,7 +46,7 @@ export default function Homepage() {
     const y = clientY - rect.top;
     const rotation = Math.floor(Math.random() * (360 - 0) + 1) + 'deg';
     const scale = Math.random() * (1 - 0.5) + 0.5;
-    const randomVideo = Math.random() < 0.5 ? {Video1} : {Video2};
+    const randomVideo = Math.random() < 0.5 ? Video1 : Video2;
 
     const newVideo = {
       x,
@@ -94,12 +94,13 @@ export default function Homepage() {
       firstVideoAnimated.current = true;
     }
   }, [videos]);
-  console.log(videos);
+
   return (
     <section className="goutte" onClick={handleClick}>
       {videos.map((video) => (
         <video
           key={video.key}
+          src={video.videoName}
           alt="VIDEO"
           style={{
             position: 'absolute',
@@ -108,10 +109,8 @@ export default function Homepage() {
             transform: `rotate(${video.rotation}) scale(${video.scale})`,
             opacity: video.opacity || 1,
           }}
-          src={video.videoName}
           className={video.paused ? 'videoClick paused' : 'videoClick'}
           autoPlay={!video.paused}
-          key={video.videoName}
         ></video>
       ))}
 
@@ -124,7 +123,6 @@ export default function Homepage() {
       <div>
         <Parallax2 />
         <Pictures />
-        <Water />
       </div>
     </section>
   );
