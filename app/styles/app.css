@@ -240,7 +240,7 @@ aside li {
 }
 
 .cart-summary-aside {
-  background: white;
+  background: black;
   border-top: 1px solid var(--color-dark);
   bottom: 0;
   padding-top: 0.75rem;
@@ -393,6 +393,7 @@ aside li {
 * --------------------------------------------------
 */
 .product {
+  filter: brightness(100%) !important;
   display: grid;
   max-width: 400px;
   margin: 50px auto;
@@ -444,6 +445,22 @@ aside li {
   padding: 0.25rem 0.5rem;
 }
 
+.product-form button {
+  background-color: lightgrey;
+  border: none;
+  padding: 10px 20px;
+  width: 100%;
+  text-transform: uppercase;
+}
+.product-form button:hover {
+  transform: scale(1.05);
+}
+
+.discountbtn {
+  background-color: lightgrey;
+  padding: 10px 20px;
+  text-transform: uppercase;
+}
 /*
 * --------------------------------------------------
 * routes/blog._index.tsx

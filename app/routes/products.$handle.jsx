@@ -1,7 +1,7 @@
 import {Suspense} from 'react';
 import {defer, redirect} from '@shopify/remix-oxygen';
 import {Await, Link, useLoaderData} from '@remix-run/react';
-
+import '../styles/product.css';
 import {
   Image,
   Money,
@@ -231,6 +231,7 @@ function ProductForm({product, selectedVariant, variants}) {
       </VariantSelector>
       <br />
       <AddToCartButton
+        className="addbutton"
         disabled={!selectedVariant || !selectedVariant.availableForSale}
         onClick={() => {
           window.location.href = window.location.href + '#cart-aside';
@@ -246,7 +247,7 @@ function ProductForm({product, selectedVariant, variants}) {
             : []
         }
       >
-        {selectedVariant?.availableForSale ? 'Add to cart' : 'Sold out'}
+        {selectedVariant?.availableForSale ? 'Ajouter au panier' : 'Épuisé'}
       </AddToCartButton>
     </div>
   );

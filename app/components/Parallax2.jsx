@@ -53,9 +53,6 @@ function Parallax2(params) {
           className="paral__city--layer paral__city--layer--2"
           id="par"
         ></div>
-        {/* <img src={Batiment} alt="" className="paral__city--layer" />
-                    {/* <img src={Batiment2} alt="" className="paral__city--layer" /> */}
-        {/* <img src={Batiment3} alt="" className="paral__city--layer" /> */}
       </div>
       {/* <div className='container'>
             {Data.map((data) => {
@@ -63,7 +60,6 @@ function Parallax2(params) {
 
             })}
             </div> */}
-      {/* <Pictures /> */}
     </section>
   );
 }
