@@ -1,7 +1,7 @@
 import {Await, NavLink} from '@remix-run/react';
 import {Suspense} from 'react';
 import {useRootLoaderData} from '~/root';
-
+import Cart from '../images/cart.svg';
 /**
  * @param {HeaderProps}
  */
@@ -86,7 +86,7 @@ function HeaderCtas({isLoggedIn, cart}) {
     <nav className="header-ctas" role="navigation">
       <HeaderMenuMobileToggle />
       <NavLink prefetch="intent" to="/account" style={activeLinkStyle}>
-        {isLoggedIn ? 'Account' : 'Sign in'}
+        {isLoggedIn ? 'Compte' : 'Se connecter'}
       </NavLink>
       <SearchToggle />
       <CartToggle cart={cart} />
@@ -103,14 +103,19 @@ function HeaderMenuMobileToggle() {
 }
 
 function SearchToggle() {
-  return <a href="#search-aside">Search</a>;
+  return <a href="#search-aside">Recherche</a>;
 }
 
 /**
  * @param {{count: number}}
  */
 function CartBadge({count}) {
-  return <a href="#cart-aside">Cart {count}</a>;
+  return (
+    <a href="#cart-aside">
+      <img src={Cart} alt="" />
+      {count}
+    </a>
+  );
 }
 
 /**

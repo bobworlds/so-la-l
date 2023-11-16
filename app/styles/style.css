@@ -27,6 +27,17 @@ main::after {
   display: block;
 }
 
+#rain {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 25;
+}
+
 @keyframes changeBtn {
   from {
     display: none;
@@ -85,7 +96,7 @@ main::after {
   grid-row-gap: 15px;
   flex-direction: column;
   overflow: hidden scroll;
-  height: 100vh;
+  height: 140vh;
   top: 150vh;
   left: 0;
   right: 0;

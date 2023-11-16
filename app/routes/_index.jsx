@@ -11,7 +11,7 @@ import {useEffect, useRef, useState} from 'react';
 import anime from 'animejs';
 import Video1 from '../images/goutte.webm';
 import Video2 from '../images/goutte2.webm';
-
+import Rain from '../images/rain.mp4';
 /**
  * @type {MetaFunction}
  */
@@ -114,6 +114,10 @@ export default function Homepage() {
           key={video.videoName}
         ></video>
       ))}
+
+      <video autoPlay loop playsInline muted id="rain">
+        <source src={Rain} type="mp4" />
+      </video>
 
       {/* <FeaturedCollection collection={data.featuredCollection} />
       <RecommendedProducts products={data.recommendedProducts} />  */}
