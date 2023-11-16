@@ -129,11 +129,13 @@ aside li {
 */
 .header {
   align-items: center;
-  background: #fff;
+  background: transparent;
   display: flex;
   height: var(--header-height);
+  color: white !important;
   padding: 0 1rem;
-  position: sticky;
+  position: absolute;
+  width: 100%;
   top: 0;
   z-index: 1;
 }

@@ -1,155 +1,217 @@
 .parallax {
-    z-index: 10;
-    position: absolute;
-    bottom: 0;
-    @include desktop {
+    background-image: url("../images/mobile/sky.png");
+    background-size: cover;
+    @include tablette {
         display: none;
+        background-image: url("../images/desktop/sky.png");
     }
-    &__btn {
-        border-radius: 30px;
-        padding: 5px 20px;
-        width: fit-content;
-        text-align: center;
-        position: relative;
-        text-align: center;
-        display: flex;
-        &:hover {
-            img {
-                transition: 1s;
-                opacity: 1;
-            }
-            p {
-                transition: 1s;
-                opacity: 0;
-            }
-        }
-
-        &--icon {
-            width: fit-content;
-            position: absolute;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            opacity: 0;
-        }
-    }
+    z-index: 10;
     &__layer {
         width: 100%;
-        position: absolute;
-        bottom: 0;
-        &.logo {
+        background-position: bottom center;
+        background-size: contain !important;
+        background-repeat: repeat-x;
+        position: fixed;
+        &--logo {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            margin: 0 auto;
             max-width: 300px;
-            .hide {
-                overflow: hidden;
+            margin: 0 auto;
+            img {
+                width: 100%;
             }
         }
-        &--img {
-            width: 100%;
-            height: 100%;
-            &--logo {
-                height: 20%;
+        &--btn {
+            background-color: #d9d9d9dc;
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            a {
+                color: black;
+                text-decoration: none;
+                font-weight: 500;
             }
-            &--3 {
-                width: 50%;
-                padding-left: 40%;
+        }
+        &--1 {
+            background-image: url("../images/mobile/bat1.png");
+        }
+        &--2 {
+            background-image: url("../images/mobile/bat3.png");
+        }
+        &--3 {
+            background-image: url("../images/mobile/panneau.png");
+        }
+        &--4 {
+            .container {
             }
+            // display: flex;
+            // flex-direction: column;
+            // justify-content: center;
+            // align-items: center;
+            // margin: 0 auto;
+            // max-width: 100vw;
+            // overflow: hidden scroll;
+            // position: relative;
         }
     }
 }
 
-// .active {
-//     display: block;
-//     opacity: 1;
-//     transition: 0.5s;
-// }
-
-// .inactive {
-//     display: none;
-//     opacity: 0;
-// }
-// .component {
-//     position: relative;
-//     width: 141px;
-// }
-
-// .component .overlap-group {
-//     background-color: #d9d9d9;
-//     border-radius: 30px;
-//     position: relative;
-//     transition: 0.35s;
-//     text-align: center;
-// }
-
-// .component .text-wrapper {
-//     color: #000000;
-//     font-family: "Inter-Bold", Helvetica;
-//     font-weight: 700;
+// .parallax {
+//     z-index: 10;
 //     position: absolute;
-//     text-align: center;
+//     bottom: 0;
+//     @include desktop {
+//         display: none;
+//     }
+//     &__btn {
+//         border-radius: 30px;
+//         padding: 5px 20px;
+//         width: fit-content;
+//         text-align: center;
+//         position: relative;
+//         text-align: center;
+//         display: flex;
+//         &:hover {
+//             img {
+//                 transition: 1s;
+//                 opacity: 1;
+//             }
+//             p {
+//                 transition: 1s;
+//                 opacity: 0;
+//             }
+//         }
+
+//         &--icon {
+//             width: fit-content;
+//             position: absolute;
+//             top: 0;
+//             left: 0;
+//             bottom: 0;
+//             right: 0;
+//             opacity: 0;
+//         }
+//     }
+//     &__layer {
+//         width: 90%;
+//         height: 300px;
+//         position: absolute;
+//         bottom: 0;
+//         &.logo {
+//             display: flex;
+//             flex-direction: column;
+//             justify-content: center;
+//             align-items: center;
+//             margin: 0 auto;
+//             max-width: 300px;
+//             .hide {
+//                 overflow: hidden;
+//             }
+//         }
+//         &--img {
+//             width: 100%;
+//             height: 100%;
+//             &--logo {
+//                 width: 100%;
+//                 padding-bottom: 40px;
+//             }
+//             &--3 {
+//                 padding-left: 350px;
+//             }
+//         }
+//     }
 // }
 
-// .component .vector {
-//     position: absolute;
-//     top: 14px;
-// }
+// // .active {
+// //     display: block;
+// //     opacity: 1;
+// //     transition: 0.5s;
+// // }
 
-// .component.group-8 {
-//     height: 93px;
-// }
+// // .inactive {
+// //     display: none;
+// //     opacity: 0;
+// // }
+// // .component {
+// //     position: relative;
+// //     width: 141px;
+// // }
 
-// .component.group-7 {
-//     height: 73px;
-// }
+// // .component .overlap-group {
+// //     background-color: #d9d9d9;
+// //     border-radius: 30px;
+// //     position: relative;
+// //     transition: 0.35s;
+// //     text-align: center;
+// // }
 
-// .component.group-8 .overlap-group {
-//     height: 59px;
-//     left: 41px;
-//     top: 17px;
-//     width: 59px;
-// }
+// // .component .text-wrapper {
+// //     color: #000000;
+// //     font-family: "Inter-Bold", Helvetica;
+// //     font-weight: 700;
+// //     position: absolute;
+// //     text-align: center;
+// // }
 
-// .component.group-7 .overlap-group {
-//     height: 29px;
-//     top: 22px;
-// }
+// // .component .vector {
+// //     position: absolute;
+// //     top: 14px;
+// // }
 
-// .component.group-8 .text-wrapper {
-//     font-size: 1px;
-//     left: 29px;
-//     letter-spacing: -0.56px;
-//     line-height: 1.4px;
-//     top: 25px;
-//     width: 1px;
-// }
+// // .component.group-8 {
+// //     height: 93px;
+// // }
 
-// .component.group-7 .text-wrapper {
-//     font-size: 12px;
-//     left: 40px;
-//     letter-spacing: 0;
-//     line-height: 16.8px;
-//     top: 5px;
-//     white-space: nowrap;
-//     width: 58px;
-// }
+// // .component.group-7 {
+// //     height: 73px;
+// // }
 
-// .component.group-8 .vector {
-//     height: 31px;
-//     left: 18px;
-//     width: 20px;
-// }
+// // .component.group-8 .overlap-group {
+// //     height: 59px;
+// //     left: 41px;
+// //     top: 17px;
+// //     width: 59px;
+// // }
 
-// .component.group-7 .vector {
-//     height: 1px;
-//     left: 68px;
-//     width: 1px;
-// }
+// // .component.group-7 .overlap-group {
+// //     height: 29px;
+// //     top: 22px;
+// // }
 
-// :root {
-//     --variable-collection-drop: initial;
-// }
+// // .component.group-8 .text-wrapper {
+// //     font-size: 1px;
+// //     left: 29px;
+// //     letter-spacing: -0.56px;
+// //     line-height: 1.4px;
+// //     top: 25px;
+// //     width: 1px;
+// // }
+
+// // .component.group-7 .text-wrapper {
+// //     font-size: 12px;
+// //     left: 40px;
+// //     letter-spacing: 0;
+// //     line-height: 16.8px;
+// //     top: 5px;
+// //     white-space: nowrap;
+// //     width: 58px;
+// // }
+
+// // .component.group-8 .vector {
+// //     height: 31px;
+// //     left: 18px;
+// //     width: 20px;
+// // }
+
+// // .component.group-7 .vector {
+// //     height: 1px;
+// //     left: 68px;
+// //     width: 1px;
+// // }
+
+// // :root {
+// //     --variable-collection-drop: initial;
+// // }
