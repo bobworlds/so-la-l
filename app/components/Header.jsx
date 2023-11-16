@@ -95,7 +95,7 @@ function HeaderCtas({isLoggedIn, cart}) {
         {isLoggedIn ? (
           <FontAwesomeIcon icon={faUser} />
         ) : (
-          <FontAwesomeIcon icon={faUserAlt} />
+          <FontAwesomeIcon icon={faUser} />
         )}
       </NavLink>
       {/* <SearchToggle /> */}
