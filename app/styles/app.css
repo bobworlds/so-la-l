@@ -408,6 +408,7 @@ aside li {
 .product-image img {
   height: auto;
   width: 100%;
+  aspect-ratio: unset !important;
 }
 
 .product-main {
