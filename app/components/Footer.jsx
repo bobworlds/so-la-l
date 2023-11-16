@@ -8,6 +8,7 @@ export function Footer({menu, shop}) {
   return (
     <footer className="footer">
       <FooterMenu menu={menu} primaryDomainUrl={shop.primaryDomain.url} />
+      <center>Réalisation par Best Of Both Worlds</center>
     </footer>
   );
 }
