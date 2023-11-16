@@ -9,7 +9,6 @@ function Pictures() {
         <article className="card" key={id}>
           <a
             href={`/products/${product.title}`}
-            target="_blank"
             rel="noopener noreferrer"
             className="card__link"
           >
