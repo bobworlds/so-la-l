@@ -210,6 +210,8 @@ aside li {
   max-height: calc(100vh - var(--cart-aside-summary-height));
   overflow-y: auto;
   width: auto;
+  z-index: 100;
+  position: relative;
 }
 
 .cart-main.with-discount {
