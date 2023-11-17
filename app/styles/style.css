@@ -107,7 +107,7 @@ main::after {
   grid-template-columns: repeat(1, 1fr);
   grid-row-gap: 25px;
   width: 80%;
-  height: 150vh;
+  height: 170vh;
   left: 0;
   right: 0;
   bottom: 0;
@@ -117,6 +117,8 @@ main::after {
 }
 @media screen and (min-width: 768px) {
   .container {
+    top: 150vh;
+    height: 150vh;
     max-width: unset;
     padding: 0 auto;
     display: grid;

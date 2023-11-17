@@ -5,7 +5,7 @@ import {Form, Link, useActionData} from '@remix-run/react';
  * @type {MetaFunction}
  */
 export const meta = () => {
-  return [{title: 'Login'}];
+  return [{title: 'Connexion'}];
 };
 
 /**
@@ -74,10 +74,10 @@ export default function Login() {
 
   return (
     <div className="login">
-      <h1>Sign in.</h1>
+      <h1>Se connecter</h1>
       <Form method="POST">
         <fieldset>
-          <label htmlFor="email">Email address</label>
+          <label htmlFor="email">E-mail</label>
           <input
             id="email"
             name="email"
@@ -89,7 +89,7 @@ export default function Login() {
             // eslint-disable-next-line jsx-a11y/no-autofocus
             autoFocus
           />
-          <label htmlFor="password">Password</label>
+          <label htmlFor="password">Mot de passe</label>
           <input
             id="password"
             name="password"
@@ -110,15 +110,15 @@ export default function Login() {
         ) : (
           <br />
         )}
-        <button type="submit">Sign in</button>
+        <button type="submit">Se connecter</button>
       </Form>
       <br />
       <div>
         <p>
-          <Link to="/account/recover">Forgot password →</Link>
+          <Link to="/account/recover">Mot de passe oublié →</Link>
         </p>
         <p>
-          <Link to="/account/register">Register →</Link>
+          <Link to="/account/register">S'enregistrer →</Link>
         </p>
       </div>
     </div>
