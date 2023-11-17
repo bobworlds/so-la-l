@@ -222,6 +222,15 @@ main::after {
   height: 100vh;
 }
 
+.footer-menu {
+  padding-top: 6%;
+  padding-bottom: 6%;
+}
+
+.footer {
+  padding-bottom: 2%;
+}
+
 .videoClick {
   mix-blend-mode: difference;
   z-index: 100;
