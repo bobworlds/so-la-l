@@ -37,7 +37,11 @@ main::after {
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 25;
+  z-index: 40;
+  mix-blend-mode: lighten;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 10%;
 }
 
 @keyframes changeBtn {
@@ -93,7 +97,7 @@ main::after {
 
 .container {
   position: absolute;
-  z-index: 30;
+  z-index: 60;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
