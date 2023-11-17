@@ -1,16 +1,8 @@
 import {Await, NavLink} from '@remix-run/react';
 import {Suspense} from 'react';
 import {useRootLoaderData} from '~/root';
-import Cart from '../images/cart.svg';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {
-  faBars,
-  faBarsProgress,
-  faBurger,
-  faCartShopping,
-  faUser,
-  faUserAlt,
-} from '@fortawesome/free-solid-svg-icons';
+import {faBars, faCartShopping} from '@fortawesome/free-solid-svg-icons';
 /**
  * @param {HeaderProps}
  */
@@ -56,7 +48,7 @@ export function HeaderMenu({menu, primaryDomainUrl, viewport}) {
           style={activeLinkStyle}
           to="/"
         >
-          ACCUEIL
+          {/* ACCUEIL */}
         </NavLink>
       )}
       {(menu || FALLBACK_HEADER_MENU).items.map((item) => {

@@ -16,7 +16,7 @@ import favicon from '../public/favicon.svg';
 import resetStyles from './styles/reset.css';
 import appStyles from './styles/app.css';
 import {Layout} from '~/components/Layout';
-import sassStyle from "./styles/style.css";
+import sassStyle from './styles/style.css';
 import picStyles from './styles/pictures.css';
 import waterStyles from './styles/water.css';
 

@@ -13,9 +13,9 @@
   top: 130vh;
   overflow: hidden scroll;
   justify-content: center;
-
+  padding-bottom: 50px;
   @include tablette {
-    top: 150vh;
+    top: 130vh;
     height: 150vh;
     max-width: unset;
     padding: 0 auto;
@@ -30,6 +30,7 @@
   }
 
   @include desktop {
+    top: 100vh;
     grid-template-columns: repeat(3, 1fr);
   }
 }
@@ -65,6 +66,7 @@
     width: 100%;
     bottom: 0;
     right: 0;
+    color: white;
   }
 }
 

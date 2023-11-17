@@ -9,11 +9,14 @@
 @import './pictures';
 // @import "./footer";
 @import './parallax2';
-.footer-menu{
+@import './carousel';
+
+@import '~bootstrap/scss/bootstrap';
+.footer-menu {
   padding-top: 6%;
   padding-bottom: 6%;
 }
-.footer{
+.footer {
   padding-bottom: 2%;
 }
 .videoClick {

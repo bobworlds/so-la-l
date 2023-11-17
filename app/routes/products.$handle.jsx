@@ -2,7 +2,12 @@ import {Suspense} from 'react';
 import {defer, redirect} from '@shopify/remix-oxygen';
 import {Await, Link, useLoaderData} from '@remix-run/react';
 import '../styles/product.css';
-
+import Box3d from '../images/3dbox.png';
+import Box1 from '../images/box1.png';
+import Box2 from '../images/box2.png';
+import BoxClose from '../images/boxclose.png';
+import {Splide, SplideSlide} from '@splidejs/react-splide';
+import Carousel from 'react-bootstrap/Carousel';
 import {
   Image,
   Money,
@@ -107,14 +112,32 @@ export default function Product() {
   /** @type {LoaderReturnData} */
   const {product, variants} = useLoaderData();
   const {selectedVariant} = product;
+
   return (
     <div className="product">
-      <ProductImage image={selectedVariant?.image} />
+      <Carousel className="imageP">
+        <Carousel.Item>
+          <ProductImage image={selectedVariant?.image} />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img src={Box1} alt="" />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img src={Box2} alt="" />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img src={BoxClose} alt="" />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img src={Box3d} alt="" />
+        </Carousel.Item>
+      </Carousel>
       <ProductMain
         selectedVariant={selectedVariant}
         product={product}
         variants={variants}
       />
+      {/* <Carrousel classname="rental__carrousel" slider={product.images} /> */}
     </div>
   );
 }
@@ -369,6 +392,13 @@ const PRODUCT_FRAGMENT = `#graphql
     options {
       name
       values
+    }
+    featuredImage{
+      id
+      url
+      altText
+      width
+      height
     }
     selectedVariant: variantBySelectedOptions(selectedOptions: $selectedOptions) {
       ...ProductVariant
