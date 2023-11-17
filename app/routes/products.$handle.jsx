@@ -230,6 +230,9 @@ function ProductForm({product, selectedVariant, variants}) {
       >
         {({option}) => <ProductOptions key={option.name} option={option} />}
       </VariantSelector>
+      <p className="invent">
+        Il ne reste que {product.totalInventory} tirage(s)
+      </p>
       <br />
       <AddToCartButton
         className="addbutton"
@@ -363,6 +366,7 @@ const PRODUCT_FRAGMENT = `#graphql
     handle
     descriptionHtml
     description
+    totalInventory
     options {
       name
       values

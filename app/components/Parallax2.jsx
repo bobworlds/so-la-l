@@ -3,7 +3,6 @@ import Logo from '../images/logo.png';
 import Pictures from './Pictures';
 import Data from '../datas/images.json';
 import Drop from '../images/drop.png';
-import {useFetcher} from 'react-router-dom';
 // import SimpleParallax from 'simple-parallax-js';
 
 function Parallax2(params) {

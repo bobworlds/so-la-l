@@ -14,7 +14,7 @@
     #logo {
       position: fixed;
       width: 300px;
-      top: 30vh;
+      top: 40vh;
       .bottom {
         animation: toBottom 1s 1s linear forwards;
       }
@@ -33,6 +33,7 @@
         height: 200%;
         width: 100%;
         background-size: cover;
+        object-fit: cover;
       }
       &--2 {
         background-image: url('../images/mobile/bat3.png');

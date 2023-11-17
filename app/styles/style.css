@@ -44,6 +44,10 @@ main::after {
   opacity: 10%;
 }
 
+.invent {
+  font-size: 23px;
+}
+
 @keyframes changeBtn {
   from {
     display: none;
@@ -107,7 +111,7 @@ main::after {
   left: 0;
   right: 0;
   bottom: 0;
-  top: 150vh;
+  top: 130vh;
   overflow: hidden scroll;
   justify-content: center;
 }
@@ -173,7 +177,7 @@ main::after {
 .paral__logo #logo {
   position: fixed;
   width: 300px;
-  top: 30vh;
+  top: 40vh;
 }
 .paral__logo #logo .bottom {
   animation: toBottom 1s 1s linear forwards;
@@ -193,6 +197,8 @@ main::after {
   height: 200%;
   width: 100%;
   background-size: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .paral__city--layer--2 {
   background-image: url("../images/mobile/bat3.png");

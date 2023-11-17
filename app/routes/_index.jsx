@@ -12,6 +12,10 @@ import anime from 'animejs';
 import Video1 from '../images/goutte.webm';
 import Video2 from '../images/goutte2.webm';
 import Rain from '../images/rain.mp4';
+import Carousel from '~/components/Carousel';
+import product from '../datas/images.json';
+import Card from '~/components/Card';
+
 /**
  * @type {MetaFunction}
  */
@@ -123,6 +127,8 @@ export default function Homepage() {
       <div>
         <Parallax2 />
         <Pictures />
+        {/* <Carousel /> */}
+        {/* <RecommendedProducts products={data.recommendedProducts} /> */}
       </div>
     </section>
   );
@@ -179,6 +185,7 @@ function RecommendedProducts({products}) {
                   <small>
                     <Money data={product.priceRange.minVariantPrice} />
                   </small>
+                  <p>{product.totalInventory}</p>
                 </Link>
               ))}
             </div>
@@ -218,11 +225,13 @@ const RECOMMENDED_PRODUCTS_QUERY = `#graphql
     id
     title
     handle
+    totalInventory
     priceRange {
       minVariantPrice {
         amount
         currencyCode
       }
+      
     }
     images(first: 1) {
       nodes {
