@@ -117,17 +117,16 @@ export default function Homepage() {
           autoPlay={!video.paused}
         ></video>
       ))}
-
       <video autoPlay loop playsInline muted id="rain">
         <source src={Rain} type="video/mp4" />
       </video>
-
-      {/* <FeaturedCollection collection={data.featuredCollection} />
-      <RecommendedProducts products={data.recommendedProducts} />  */}
+      {/* <RecommendedProducts products={data.recommendedProducts} /> */}
       <div>
         <Parallax2 />
         <Pictures />
         {/* <Carousel /> */}
+        {/* <FeaturedCollection collection={data.featuredCollection} /> */}
+
         {/* <RecommendedProducts products={data.recommendedProducts} /> */}
       </div>
     </section>
@@ -165,8 +164,8 @@ function FeaturedCollection({collection}) {
 function RecommendedProducts({products}) {
   return (
     <div className="recommended-products">
-      <h2>Recommended Products</h2>
-      <Suspense fallback={<div>Loading...</div>}>
+      <h2>Édition limitée</h2>
+      <Suspense fallback={<div>Chargement...</div>}>
         <Await resolve={products}>
           {({products}) => (
             <div className="recommended-products-grid">
@@ -245,7 +244,7 @@ const RECOMMENDED_PRODUCTS_QUERY = `#graphql
   }
   query RecommendedProducts ($country: CountryCode, $language: LanguageCode)
     @inContext(country: $country, language: $language) {
-    products(first: 4, sortKey: UPDATED_AT, reverse: true) {
+    products(first: 18, sortKey: UPDATED_AT, reverse: true) {
       nodes {
         ...RecommendedProduct
       }

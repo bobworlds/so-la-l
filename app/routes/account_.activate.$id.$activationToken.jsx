@@ -5,7 +5,7 @@ import {Form, useActionData} from '@remix-run/react';
  * @type {MetaFunction}
  */
 export const meta = () => {
-  return [{title: 'Activate Account'}];
+  return [{title: 'Activation du compte'}];
 };
 
 /**
