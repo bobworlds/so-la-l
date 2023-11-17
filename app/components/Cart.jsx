@@ -31,7 +31,6 @@ function CartDetails({layout, cart}) {
       <CartLines lines={cart?.lines} layout={layout} />
       {cartHasItems && (
         <CartSummary cost={cart.cost} layout={layout}>
-          <CartDiscounts discountCodes={cart.discountCodes} />
           <CartCheckoutActions checkoutUrl={cart.checkoutUrl} />
         </CartSummary>
       )}
@@ -49,7 +48,7 @@ function CartLines({lines, layout}) {
   if (!lines) return null;
 
   return (
-    <div aria-labelledby="cart-lines">
+    <div aria-labelledby="cart-lines" className="cart-lines">
       <ul>
         {lines.nodes.map((line) => (
           <CartLineItem key={line.id} line={line} layout={layout} />
@@ -102,9 +101,7 @@ function CartLineItem({layout, line}) {
         <ul>
           {selectedOptions.map((option) => (
             <li key={option.name}>
-              <small>
-                {option.name}: {option.value}
-              </small>
+              <small></small>
             </li>
           ))}
         </ul>
@@ -121,7 +118,7 @@ function CartCheckoutActions({checkoutUrl}) {
   if (!checkoutUrl) return null;
 
   return (
-    <div>
+    <div className="checkout">
       <a href={checkoutUrl} target="_self">
         <p>Paiement &rarr;</p>
       </a>
@@ -145,7 +142,7 @@ export function CartSummary({cost, layout, children = null}) {
     <div aria-labelledby="cart-summary" className={className}>
       <h4>Total</h4>
       <dl className="cart-subtotal">
-        <dt>Sous-total</dt>
+        <dt>Sous-total : </dt>
         <dd>
           {cost?.subtotalAmount?.amount ? (
             <Money data={cost?.subtotalAmount} />
@@ -169,7 +166,7 @@ function CartLineRemoveButton({lineIds}) {
       action={CartForm.ACTIONS.LinesRemove}
       inputs={{lineIds}}
     >
-      <button type="submit">Remove</button>
+      <button type="submit">Supprimer</button>
     </CartForm>
   );
 }
@@ -251,10 +248,10 @@ export function CartEmpty({hidden = false, layout = 'aside'}) {
       <p>Panier vide</p>
       <br />
       <Link
-        to="/collections"
+        to="/"
         onClick={() => {
           if (layout === 'aside') {
-            window.location.href = '/collections';
+            window.location.href = '/';
           }
         }}
       >

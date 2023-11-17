@@ -168,6 +168,7 @@ aside li {
 
 .header-menu-item {
   cursor: pointer;
+  text-transform: uppercase !important;
 }
 
 .header-ctas {
@@ -175,6 +176,7 @@ aside li {
   display: flex;
   grid-gap: 1rem;
   margin-left: auto;
+  font-size: 20px;
 }
 
 /*
@@ -185,7 +187,7 @@ aside li {
 .footer {
   background: var(--color-dark);
   margin: auto;
-  font-size: small;
+  font-size: 20px;
   position: relative;
   z-index: 40;
 }
@@ -217,13 +219,16 @@ aside li {
   overflow-y: auto;
   width: auto;
   z-index: 100;
-  position: relative;
 }
 
 .cart-main.with-discount {
   max-height: calc(100vh - var(--cart-aside-summary-height-with-discount));
 }
 
+.cart-lines {
+  position: relative;
+  z-index: 20;
+}
 .cart-line {
   display: flex;
   padding: 0.75rem 0;
@@ -255,7 +260,7 @@ aside li {
 .cart-discount {
   align-items: center;
   display: flex;
-  margin-top: 0.25rem;
+  margin-top: 10rem;
 }
 
 .cart-subtotal {
@@ -445,8 +450,14 @@ aside li {
   padding: 0.25rem 0.5rem;
 }
 
+button {
+  font-family: 'Mango';
+  font-size: 25px;
+}
+
 .product-form button {
-  background-color: lightgrey;
+  background-color: black;
+  color: white;
   border: none;
   padding: 10px 20px;
   width: 100%;

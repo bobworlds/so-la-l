@@ -11,10 +11,10 @@
     max-width: 300px;
     margin: 0 auto;
 
-    img {
+    #logo {
       position: fixed;
       width: 300px;
-      top: 50vh;
+      top: 30vh;
       .bottom {
         animation: toBottom 1s 1s linear forwards;
       }

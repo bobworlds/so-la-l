@@ -16,7 +16,7 @@ import Rain from '../images/rain.mp4';
  * @type {MetaFunction}
  */
 export const meta = () => {
-  return [{title: 'Hydrogen | Home'}];
+  return [{title: `SO LA LUNE | L'ENFANT DE LA PLUIE`}];
 };
 
 /**
@@ -114,9 +114,9 @@ export default function Homepage() {
         ></video>
       ))}
 
-      {/* <video autoPlay loop playsInline muted id="rain">
+      <video autoPlay loop playsInline muted id="rain">
         <source src={Rain} type="mp4" />
-      </video> */}
+      </video>
 
       {/* <FeaturedCollection collection={data.featuredCollection} />
       <RecommendedProducts products={data.recommendedProducts} />  */}

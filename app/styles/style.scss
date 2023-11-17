@@ -14,3 +14,8 @@
   mix-blend-mode: difference;
   z-index: 100;
 }
+
+@font-face {
+  font-family: 'Mango';
+  src: url('./MangoGrotesque-Bold.otf') format(opentype);
+}

@@ -2,6 +2,7 @@ import {Suspense} from 'react';
 import {defer, redirect} from '@shopify/remix-oxygen';
 import {Await, Link, useLoaderData} from '@remix-run/react';
 import '../styles/product.css';
+
 import {
   Image,
   Money,
@@ -15,7 +16,7 @@ import {getVariantUrl} from '~/utils';
  * @type {MetaFunction<typeof loader>}
  */
 export const meta = ({data}) => {
-  return [{title: `Hydrogen | ${data?.product.title ?? ''}`}];
+  return [{title: `SO LA LUNE | ${data?.product.title ?? ''}`}];
 };
 
 /**

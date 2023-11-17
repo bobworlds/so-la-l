@@ -5,36 +5,41 @@
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-row-gap: 25px;
-  width: 100%;
+  width: 80%;
   height: 150vh;
   left: 0;
   right: 0;
   bottom: 0;
   top: 150vh;
   overflow: hidden scroll;
-  padding: 0 20%;
+  justify-content: center;
+
   @include tablette {
     max-width: unset;
     padding: 0 auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 15px;
-    grid-row-gap: 15px;
-
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    justify-content: center;
     &::-webkit-scrollbar {
       display: none;
     }
+  }
+
+  @include desktop {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 .card {
   display: block;
   position: relative;
-  width: 300px;
+  border-radius: 0;
+  cursor: pointer;
   &:hover {
-    box-shadow: 1px 1px 11px 2px lightgrey;
     transition: 0.5s;
-    transform: scale(1.05);
+    transform: scale(1.02);
     &::before {
       background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.557));
       position: absolute;
@@ -46,13 +51,9 @@
     }
   }
 
-  &__link {
-  }
   &__img {
-    &:hover {
-      transform: scale(1.05);
-    }
-
+    border-radius: 0;
+    object-fit: cover;
     width: 100%;
   }
 }
