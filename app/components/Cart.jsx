@@ -93,9 +93,7 @@ function CartLineItem({layout, line}) {
             }
           }}
         >
-          <p>
-            <strong>{product.title}</strong>
-          </p>
+          <p className="productTitleCart">{product.title}</p>
         </Link>
         <CartLinePrice line={line} as="span" />
         <ul>
@@ -166,7 +164,9 @@ function CartLineRemoveButton({lineIds}) {
       action={CartForm.ACTIONS.LinesRemove}
       inputs={{lineIds}}
     >
-      <button type="submit">Supprimer</button>
+      <button className="supprCart" type="submit">
+        Supprimer
+      </button>
     </CartForm>
   );
 }
@@ -182,7 +182,8 @@ function CartLineQuantity({line}) {
 
   return (
     <div className="cart-line-quantiy">
-      <small>Quantity: {quantity} &nbsp;&nbsp;</small>
+      <small>Quantité: {quantity} &nbsp;&nbsp;</small>
+      <br />
       <CartLineUpdateButton lines={[{id: lineId, quantity: prevQuantity}]}>
         <button
           aria-label="Decrease quantity"

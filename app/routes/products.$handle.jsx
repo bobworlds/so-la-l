@@ -177,11 +177,10 @@ function ProductMain({selectedVariant, product, variants}) {
       </Suspense>
       <br />
       <br />
-      <p>
-        <strong>Description</strong>
-      </p>
-      <br />
-      <div dangerouslySetInnerHTML={{__html: descriptionHtml}} />
+      <div
+        className="desc"
+        dangerouslySetInnerHTML={{__html: descriptionHtml}}
+      />
       <br />
     </div>
   );
@@ -231,7 +230,7 @@ function ProductForm({product, selectedVariant, variants}) {
         {({option}) => <ProductOptions key={option.name} option={option} />}
       </VariantSelector>
       <p className="invent">
-        Il ne reste que {product.totalInventory} tirage(s)
+        Il ne reste que {product.totalInventory}/200 tirages
       </p>
       <br />
       <AddToCartButton

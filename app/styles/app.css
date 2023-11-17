@@ -184,6 +184,14 @@ aside li {
   grid-gap: 1rem;
   margin-left: auto;
   font-size: 20px;
+  width: 100%;
+  justify-content: space-between;
+}
+@media screen and (min-width: 700px) {
+  .header-ctas {
+    width: unset;
+    justify-content: unset;
+  }
 }
 
 /*
@@ -264,6 +272,11 @@ aside li {
   display: flex;
 }
 
+.supprCart {
+  background-color: white !important;
+  color: black;
+  border: none;
+}
 .cart-discount {
   align-items: center;
   display: flex;
@@ -273,6 +286,19 @@ aside li {
 .cart-subtotal {
   align-items: center;
   display: flex;
+}
+
+.checkout p {
+  background-color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: larger;
+  width: 100%;
+  color: black;
+}
+
+.productTitleCart {
+  font-size: larger;
 }
 /*
 * --------------------------------------------------
@@ -409,6 +435,7 @@ aside li {
   display: grid;
   max-width: 300px;
   margin: 100px auto;
+
   @media (min-width: 45em) {
     margin: 30vh auto;
     max-width: 1000px;
@@ -420,6 +447,12 @@ aside li {
 @media screen and (min-width: 500px) {
   .product {
     max-width: 450px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .product {
+    max-width: 800px;
   }
 }
 
@@ -438,10 +471,16 @@ aside li {
   aspect-ratio: unset !important;
 }
 
+.desc p {
+  font-size: 20px;
+}
 .product-main {
   align-self: start;
   position: sticky;
   top: 6rem;
+}
+.product-main h1 {
+  font-size: 35px;
 }
 
 .product-price-on-sale {

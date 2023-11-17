@@ -4,6 +4,9 @@ import {useRootLoaderData} from '~/root';
 import Cart from '../images/cart.svg';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {
+  faBars,
+  faBarsProgress,
+  faBurger,
   faCartShopping,
   faUser,
   faUserAlt,
@@ -53,7 +56,7 @@ export function HeaderMenu({menu, primaryDomainUrl, viewport}) {
           style={activeLinkStyle}
           to="/"
         >
-          Accueil
+          ACCUEIL
         </NavLink>
       )}
       {(menu || FALLBACK_HEADER_MENU).items.map((item) => {
@@ -90,14 +93,14 @@ export function HeaderMenu({menu, primaryDomainUrl, viewport}) {
 function HeaderCtas({isLoggedIn, cart}) {
   return (
     <nav className="header-ctas" role="navigation">
-      {/* <HeaderMenuMobileToggle /> */}
-      <NavLink prefetch="intent" to="/account" style={activeLinkStyle}>
+      <HeaderMenuMobileToggle />
+      {/* <NavLink prefetch="intent" to="/account" style={activeLinkStyle}>
         {isLoggedIn ? (
           <FontAwesomeIcon icon={faUser} />
         ) : (
           <FontAwesomeIcon icon={faUser} />
         )}
-      </NavLink>
+      </NavLink> */}
       {/* <SearchToggle /> */}
       <CartToggle cart={cart} />
     </nav>
@@ -107,7 +110,7 @@ function HeaderCtas({isLoggedIn, cart}) {
 function HeaderMenuMobileToggle() {
   return (
     <a className="header-menu-mobile-toggle" href="#mobile-menu-aside">
-      <h3>☰</h3>
+      <FontAwesomeIcon icon={faBars} />
     </a>
   );
 }
