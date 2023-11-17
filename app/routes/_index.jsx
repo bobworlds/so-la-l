@@ -100,23 +100,7 @@ export default function Homepage() {
   }, [videos]);
 
   return (
-    <section className="goutte" onClick={handleClick}>
-      {videos.map((video) => (
-        <video
-          key={video.key}
-          src={video.videoName}
-          alt="VIDEO"
-          style={{
-            position: 'absolute',
-            top: video.y - 250 + 'px',
-            left: video.x - 230 + 'px',
-            transform: `rotate(${video.rotation}) scale(${video.scale})`,
-            opacity: video.opacity || 1,
-          }}
-          className={video.paused ? 'videoClick paused' : 'videoClick'}
-          autoPlay={!video.paused}
-        ></video>
-      ))}
+      <section>
       <video autoPlay loop playsInline muted id="rain">
         <source src={Rain} type="video/mp4" />
       </video>
