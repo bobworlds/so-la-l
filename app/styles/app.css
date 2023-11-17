@@ -407,13 +407,19 @@ aside li {
 .product {
   filter: brightness(100%) !important;
   display: grid;
-  max-width: 400px;
-  margin: 50px auto;
+  max-width: 300px;
+  margin: 100px auto;
   @media (min-width: 45em) {
     margin: 30vh auto;
     max-width: 1000px;
     grid-template-columns: 1fr 1fr;
     grid-gap: 4rem;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .product {
+    max-width: 450px;
   }
 }
 
