@@ -30,7 +30,7 @@
   }
 
   @include desktop {
-    top: 100vh;
+    top: 140vh;
     grid-template-columns: repeat(3, 1fr);
   }
 }
