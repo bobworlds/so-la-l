@@ -1,12 +1,15 @@
 [
   {
     "id": "",
+    "name": "OPENING",
     "title": "cd-tirage-opening",
     "src": "https://cdn.shopify.com/s/files/1/0559/8035/9754/files/1.png?v=1700141690",
     "tirage": "45"
   },
   {
     "id": "",
+    "name": "REMONTADA",
+
     "title": "cd-tirage-remontada",
     "src": "https://cdn.shopify.com/s/files/1/0559/8035/9754/files/2.png?v=1700141713",
     "tirage": ""
@@ -14,11 +17,15 @@
   {
     "id": "",
     "title": "cd-tirage-99-avenue",
+    "name": "99 AVENUE",
+
     "src": "https://cdn.shopify.com/s/files/1/0559/8035/9754/files/3.png?v=1700141728",
     "tirage": ""
   },
   {
     "id": "",
+    "name": "TIRAGE BLOQUÉ",
+
     "title": "cd-tirage-bloque",
     "src": "https://cdn.shopify.com/s/files/1/0559/8035/9754/files/4.png?v=1700141758",
     "tirage": ""
@@ -26,84 +33,112 @@
   {
     "id": "",
     "title": "cd-tirage-un-jour-dete",
+    "name": "UN JOUR D'ÉTÉ",
+
     "src": "https://cdn.shopify.com/s/files/1/0559/8035/9754/files/5.png?v=1700141790",
     "tirage": ""
   },
   {
     "id": "",
     "title": "cd-tirage-perte-de-temps-ft-khali",
+    "name": "PERTE DE TEMPS FT KHALI",
+
     "src": "https://cdn.shopify.com/s/files/1/0559/8035/9754/files/6.png?v=1700141811",
     "tirage": ""
   },
   {
     "id": "",
     "title": "cd-tirage-lallemande",
+    "name": "L'ALLEMANDE",
+
     "src": "https://cdn.shopify.com/s/files/1/0559/8035/9754/files/7.png?v=1700141855",
     "tirage": ""
   },
   {
     "id": "",
     "title": "cd-tirage-10-hummers",
+    "name": "10 HUMMERS",
+
     "src": "https://cdn.shopify.com/s/files/1/0559/8035/9754/files/8.png?v=1700141877",
     "tirage": ""
   },
   {
     "id": "",
     "title": "cd-tirage-bip-bip",
+    "name": "BIP BIP",
+
     "src": "https://cdn.shopify.com/s/files/1/0559/8035/9754/files/9.png?v=1700141892",
     "tirage": ""
   },
   {
     "id": "",
     "title": "cd-tirage-sali",
+    "name": "SALI",
+
     "src": "https://cdn.shopify.com/s/files/1/0559/8035/9754/files/10.png?v=1700141919",
     "tirage": ""
   },
   {
     "id": "",
     "title": "cd-tirage-interlude-froide-laverse",
+    "name": "INTERLUDE FROIDE L'AVERSE",
+
     "src": "https://cdn.shopify.com/s/files/1/0559/8035/9754/files/11.png?v=1700141953",
     "tirage": ""
   },
   {
     "id": "",
     "title": "cd-tirage-suspects-ft-sch",
+    "name": "SUSPECTS FT SCH",
+
     "src": "https://cdn.shopify.com/s/files/1/0559/8035/9754/files/12.png?v=1700141990",
     "tirage": ""
   },
   {
     "id": "",
     "title": "cd-tirage-op",
+    "name": "OP",
+
     "src": "https://cdn.shopify.com/s/files/1/0559/8035/9754/files/13.png?v=1700142012",
     "tirage": ""
   },
   {
     "id": "",
     "title": "cd-tirage-le-dernier-maitre-de-leau",
+    "name": "LE DERNIER MAITRE DE L'EAU",
+
     "src": "https://cdn.shopify.com/s/files/1/0559/8035/9754/files/14.png?v=1700142045",
     "tirage": ""
   },
   {
     "id": "",
     "title": "cd-tirage-les-toits-de-la-ville",
+    "name": "LES TOITS DE LA VILLE",
+
     "src": "https://cdn.shopify.com/s/files/1/0559/8035/9754/files/15.png?v=1700142062",
     "tirage": ""
   },
   {
     "id": "",
     "title": "cd-tirage-triste-temps",
+    "name": "TRISTE TEMPS",
+
     "src": "https://cdn.shopify.com/s/files/1/0559/8035/9754/files/16.png?v=1700142105",
     "tirage": ""
   },
   {
     "id": "",
     "title": "cd-tirage-au-bpm",
+    "name": "AU BPM",
+
     "src": "https://cdn.shopify.com/s/files/1/0559/8035/9754/files/17.png?v=1700142128",
     "tirage": ""
   },
   {
     "id": "",
     "title": "cd-tirage-sales-images",
+    "name": "SALES IMAGES",
+
     "src": "https://cdn.shopify.com/s/files/1/0559/8035/9754/files/18.png?v=1700141570",
     "tirage": ""
   }

@@ -14,7 +14,7 @@ function Pictures() {
             <img src={product.src} alt={product.title} className="card__img" />
 
             {/* <p className='compteur'>{tirage}/200</p> */}
-            <h2 className="card__title">{product.title}</h2>
+            <h2 className="card__title">{product.name}</h2>
           </article>
         </a>
       );
