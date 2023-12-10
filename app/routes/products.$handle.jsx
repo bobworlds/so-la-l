@@ -304,7 +304,7 @@ function ProductForm({product, selectedVariant, variants}) {
       {product.handle != 'pack-cd-hoodie' &&
       product.handle != 'pack-cd-t-shirt' &&
       product.handle != 'cd-lenfant-de-la-pluie' &&
-      product.handle != 'megapack' ? (
+      product.handle != 'pack-cd-cagoule' ? (
         <p className="invent">
           Il ne reste que {product.totalInventory}/200 tirages
         </p>
