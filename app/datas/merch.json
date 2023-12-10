@@ -1,11 +1,5 @@
 [
   {
-    "title": "CD L'ENFANT DE LA PLUIE",
-    "image": "https://cdn.shopify.com/s/files/1/0559/8035/9754/files/CD.png?v=1701960122",
-    "url": "cd-lenfant-de-la-pluie",
-    "price": "12,00€"
-  },
-  {
     "title": "PACK CD + T-SHIRT",
     "image": "https://cdn.shopify.com/s/files/1/0559/8035/9754/files/Ficheteev2.png?v=1702198059",
     "url": "pack-cd-t-shirt",
@@ -22,5 +16,11 @@
     "image": "https://cdn.shopify.com/s/files/1/0559/8035/9754/files/CD_HOOD.png?v=1701959498",
     "url": "pack-cd-cagoule",
     "price": "25,00€"
+  },
+  {
+    "title": "CD L'ENFANT DE LA PLUIE",
+    "image": "https://cdn.shopify.com/s/files/1/0559/8035/9754/files/CD.png?v=1701960122",
+    "url": "cd-lenfant-de-la-pluie",
+    "price": "12,00€"
   }
 ]
