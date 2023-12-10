@@ -10,11 +10,38 @@
     align-items: center;
     max-width: 300px;
     margin: 0 auto;
-
+    &--btn {
+      display: flex;
+      // flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      position: fixed;
+      top: 55vh;
+      z-index: 40;
+      width: 250px;
+      margin: auto;
+      a {
+        background-color: #597098;
+        border-radius: 60px;
+        padding: 10px;
+        width: fit-content;
+        text-align: center;
+        margin-bottom: 15px;
+        font-size: 30px;
+        &:hover {
+          background-color: #999982;
+          transition: 0.5s;
+        }
+      }
+      #btnBox,
+      #btnMerch {
+        width: 80px;
+      }
+    }
     #logo {
       position: fixed;
       width: 300px;
-      top: 40vh;
+      top: 35vh;
       .bottom {
         animation: toBottom 1s 1s linear forwards;
       }
@@ -27,7 +54,7 @@
       position: absolute;
       width: 100%;
       bottom: 0;
-      z-index: 30;
+      z-index: 50;
       &--1 {
         background-image: url('../images/mobile/bat1.png');
         height: 220%;
@@ -40,7 +67,7 @@
         height: 200%;
         width: 100%;
         background-size: cover;
-        z-index: 10;
+        z-index: 40;
       }
     }
   }

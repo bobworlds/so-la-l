@@ -1,20 +1,14 @@
 import {defer} from '@shopify/remix-oxygen';
 import {Await, useLoaderData, Link} from '@remix-run/react';
-import {Suspense} from 'react';
 import {Image, Money} from '@shopify/hydrogen';
-import ParallaxBan from '../components/ParallaxBan';
-import ParallaxBanD from '~/components/ParallaxBanD';
 import Pictures from '~/components/Pictures';
-import Water from '~/components/Water';
+import Merch from '~/components/Merch';
 import Parallax2 from '~/components/Parallax2';
-import {useEffect, useRef, useState} from 'react';
+import {useEffect, useRef, useState, Suspense} from 'react';
 import anime from 'animejs';
 import Video1 from '../images/goutte.webm';
 import Video2 from '../images/goutte2.webm';
 import Rain from '../images/rain.mp4';
-import Carousel from '~/components/Carousel';
-import product from '../datas/images.json';
-import Card from '~/components/Card';
 
 /**
  * @type {MetaFunction}
@@ -100,20 +94,22 @@ export default function Homepage() {
   }, [videos]);
 
   return (
-      <section>
+    <main id="main">
       <video autoPlay loop playsInline muted id="rain">
         <source src={Rain} type="video/mp4" />
       </video>
       {/* <RecommendedProducts products={data.recommendedProducts} /> */}
       <div>
         <Parallax2 />
-        <Pictures />
+        {/* <Pictures />
+        <Merch /> */}
+
         {/* <Carousel /> */}
         {/* <FeaturedCollection collection={data.featuredCollection} /> */}
 
         {/* <RecommendedProducts products={data.recommendedProducts} /> */}
       </div>
-    </section>
+    </main>
   );
 }
 

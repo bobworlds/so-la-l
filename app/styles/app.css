@@ -433,26 +433,23 @@ aside li {
 .product {
   filter: brightness(100%) !important;
   display: grid;
-  max-width: 300px;
   margin: 100px auto;
-
-  @media (min-width: 45em) {
-    margin: 30vh auto;
-    max-width: 1000px;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 4rem;
-  }
+  padding: 0 10px;
+  align-content: center;
 }
-
 @media screen and (min-width: 500px) {
   .product {
-    max-width: 450px;
+    max-width: 500px;
+    width: 100%;
+    margin: 10vh auto;
   }
 }
-
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 720px) {
   .product {
-    max-width: 800px;
+    max-width: 1200px;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 4rem;
+    justify-items: center;
   }
 }
 
@@ -465,6 +462,11 @@ aside li {
   grid-gap: 1rem;
 }
 
+/* @media screen and (min-width: 700px) {
+  .product-image {
+    width: 120%;
+  }
+} */
 .product-image img {
   height: auto;
   width: 100%;
@@ -475,7 +477,7 @@ aside li {
   font-size: 20px;
 }
 .product-main {
-  align-self: start;
+  align-self: center;
   position: sticky;
   top: 6rem;
 }

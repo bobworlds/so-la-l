@@ -8,7 +8,7 @@ function Pictures() {
           href={`/products/${product.title}`}
           rel="noopener noreferrer"
           className="card"
-          key={product.titsle}
+          key={product.title}
         >
           <article className="card__link">
             <img src={product.src} alt={product.title} className="card__img" />

@@ -12,12 +12,12 @@
   bottom: 0;
   top: 130vh;
   overflow: hidden scroll;
-  justify-content: center;
+  justify-items: center;
   padding-bottom: 50px;
+  max-width: unset !important;
   @include tablette {
     top: 130vh;
     height: 150vh;
-    max-width: unset;
     padding: 0 auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -33,6 +33,11 @@
     top: 140vh;
     grid-template-columns: repeat(3, 1fr);
   }
+  // &--merch {
+  //   @include desktop {
+  //     grid-template-columns: repeat(2, 1fr);
+  //   }
+  // }
 }
 
 .card {
@@ -70,48 +75,74 @@
   }
 }
 
-// .picturesLayer {
-//     z-index: 10;
-//     position: absolute;
-//     bottom: 0;
-// }
+.containerMerch {
+  // position: absolute;
+  // left: 0;
+  // right: 0;
+  // bottom: 0;
+  // z-index: 100;
+  // margin: 0 auto;
+  // top: 170vh;
+  // height: 170vh;
+  // width: 100%;
+  // display: grid;
+  // grid-template-columns: repeat(1, 1fr);
+  // justify-items: center;
+  // align-content: center;
+  width: 100%;
+  @include tab {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include desktop {
+    grid-template-columns: repeat(4, 1fr);
+    height: 100%;
+    overflow: unset;
+    max-width: 1100px;
+    padding-bottom: 10px;
+    top: 180vh;
+  }
 
-// .conteneur_global {
-//     max-width: 70%;
-//     margin: auto;
-//     display: flex;
-//     flex-wrap: wrap;
-//     top: 70%;
-//     position: absolute;
-//     transform: translateX(-50%);
-//     z-index: 10;
-// }
+  .card {
+    text-align: center;
+    border: solid 1px #fff4d9;
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    cursor: auto;
+    &:hover {
+      &::before {
+        background-image: none;
+      }
+    }
 
-// .all_item {
-//     width: 33.33%;
-//     text-align: center;
-//     margin: 0;
-//     padding: 0;
-// }
+    .btn {
+      transform: scale(1.1);
 
-// .img_solo {
-//     width: 100%;
-//     padding-right: 4%;
-//     padding-left: 4%;
-//     box-sizing: border-box;
-//     &:hover {
-//         transform: scale(1.15);
-//         transition: 0.7s;
-//     }
-// }
+      font-size: 20px;
+      border-radius: 10px;
+      width: 80%;
+      background-color: transparent;
+      border: solid 1px #fff4d9;
+      &:hover {
+        box-shadow: 1px 1px 8px 0px grey;
+        transition: 0.3s;
+        transform: scale(1.12);
+      }
+    }
+    @include tablette {
+      display: unset;
+      height: fit-content;
+    }
+  }
+  .h5 {
+    font-size: 30px;
+  }
+}
 
-// .compteur {
-//     color: #fff;
-//     margin-bottom: 4%;
-// }
+.card-title {
+  padding-top: 10px;
+}
 
-// @media screen and (max-width: 767px) {
-//     .all_item {
-//         width: 100%;
-//     }
-// }
+.card-body {
+  text-align: center;
+  border-radius: 0 0 20px 20px;
+}

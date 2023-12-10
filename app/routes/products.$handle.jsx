@@ -6,7 +6,9 @@ import Box3d from '../images/3dbox.png';
 import Box1 from '../images/box1.png';
 import Box2 from '../images/box2.png';
 import BoxClose from '../images/boxclose.png';
-import {Splide, SplideSlide} from '@splidejs/react-splide';
+import Coeur from '../images/Coeur.png';
+import Lune from '../images/Lune.png';
+import Size from '../images/sizechart.png';
 import Carousel from 'react-bootstrap/Carousel';
 import {
   Image,
@@ -114,29 +116,75 @@ export default function Product() {
   const {selectedVariant} = product;
 
   return (
-    <div className="product">
-      <Carousel className="imageP">
-        <Carousel.Item>
+    <div>
+      {' '}
+      {product.handle != 'pack-cd-hoodie' &&
+      product.handle != 'pack-cd-t-shirt' &&
+      product.handle != 'cd-lenfant-de-la-pluie' &&
+      product.handle != 'pack-cd-cagoule' ? (
+        <div className="product">
+          <Carousel className="imageP">
+            <Carousel.Item>
+              <ProductImage image={selectedVariant?.image} />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img src={Box1} alt="" />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img src={Box2} alt="" />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img src={BoxClose} alt="" />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img src={Box3d} alt="" />
+            </Carousel.Item>
+          </Carousel>
+          <ProductMain
+            selectedVariant={selectedVariant}
+            product={product}
+            variants={variants}
+          />
+        </div>
+      ) : product.handle == 'pack-cd-hoodie' ? (
+        <div className="product">
+          <Carousel className="imageP">
+            <Carousel.Item>
+              <ProductImage
+                image={selectedVariant?.image}
+                style={{width: '100%'}}
+              />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img src={Coeur} alt="" />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img src={Lune} alt="" />
+            </Carousel.Item>
+          </Carousel>
+          <div>
+            <ProductMain
+              selectedVariant={selectedVariant}
+              product={product}
+              variants={variants}
+            />
+            <img
+              src={Size}
+              alt="Guide des tailles"
+              style={{width: '70%', margin: '20px auto'}}
+            />
+          </div>
+        </div>
+      ) : (
+        <div className="product">
           <ProductImage image={selectedVariant?.image} />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img src={Box1} alt="" />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img src={Box2} alt="" />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img src={BoxClose} alt="" />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img src={Box3d} alt="" />
-        </Carousel.Item>
-      </Carousel>
-      <ProductMain
-        selectedVariant={selectedVariant}
-        product={product}
-        variants={variants}
-      />
+          <ProductMain
+            selectedVariant={selectedVariant}
+            product={product}
+            variants={variants}
+          />
+        </div>
+      )}
       {/* <Carrousel classname="rental__carrousel" slider={product.images} /> */}
     </div>
   );
@@ -176,6 +224,7 @@ function ProductMain({selectedVariant, product, variants}) {
       <h1>{title}</h1>
       <ProductPrice selectedVariant={selectedVariant} />
       <br />
+
       <Suspense
         fallback={
           <ProductForm
@@ -219,7 +268,7 @@ function ProductPrice({selectedVariant}) {
     <div className="product-price">
       {selectedVariant?.compareAtPrice ? (
         <>
-          <p>Sale</p>
+          <p>Solde</p>
           <br />
           <div className="product-price-on-sale">
             {selectedVariant ? <Money data={selectedVariant.price} /> : null}
@@ -252,10 +301,16 @@ function ProductForm({product, selectedVariant, variants}) {
       >
         {({option}) => <ProductOptions key={option.name} option={option} />}
       </VariantSelector>
-      <p className="invent">
-        Il ne reste que {product.totalInventory}/200 tirages
-      </p>
+      {product.handle != 'pack-cd-hoodie' &&
+      product.handle != 'pack-cd-t-shirt' &&
+      product.handle != 'cd-lenfant-de-la-pluie' &&
+      product.handle != 'megapack' ? (
+        <p className="invent">
+          Il ne reste que {product.totalInventory}/200 tirages
+        </p>
+      ) : null}
       <br />
+
       <AddToCartButton
         className="addbutton"
         disabled={!selectedVariant || !selectedVariant.availableForSale}
@@ -403,7 +458,7 @@ const PRODUCT_FRAGMENT = `#graphql
     selectedVariant: variantBySelectedOptions(selectedOptions: $selectedOptions) {
       ...ProductVariant
     }
-    variants(first: 1) {
+    variants(first: 5) {
       nodes {
         ...ProductVariant
       }

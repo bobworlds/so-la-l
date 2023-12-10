@@ -1,13 +1,18 @@
 import {useEffect, useState} from 'react';
 import Logo from '../images/logo.png';
 import Pictures from './Pictures';
+import Merch from './Merch';
 import Data from '../datas/images.json';
 import Drop from '../images/drop.png';
+import Box from '../images/box.png';
+import MerchBtn from '../images/merch.png';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faArrowUp} from '@fortawesome/free-solid-svg-icons';
+
 // import SimpleParallax from 'simple-parallax-js';
 
-function Parallax2(params) {
-  const [isClick, setClick] = useState(false);
-  const [isHover, setHover] = useState(true);
+function Parallax2() {
+  const [isClick, setClick] = useState(true);
 
   const scrollsmooth = () => {
     const par = document.getElementById('par');
@@ -19,79 +24,37 @@ function Parallax2(params) {
       behavior: 'smooth',
     });
   };
-  function handleHover() {
-    setHover(!isHover);
+  function handleClickBtnBox() {
+    // scrollsmooth();
+    setClick(false);
   }
-  function handleClickBtn() {
-    scrollsmooth();
+  function handleClickBtnMerch() {
+    // scrollsmooth();
     setClick(true);
   }
-
-  const handleScroll = () => {
-    const scrollPosition = window.scrollY; // => scroll position
-    console.log(scrollPosition);
-  };
-  useEffect(() => {
-    handleScroll();
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
-  //   const logo = document.getElementById('logo');
-  //   logo.scrollIntoView(true);
-  //   setClick(true);
-  //   console.log('log');
-  // logo.animate([
-  //     {transform: "translateY(0)"},
-  //     {transform: "translateY(100vh)"},
-  // ],
-  // {duration: 1000,
-  // iterations: EaseIn}
-  // )
-  //}
-  //   var image = document.getElementsByClassName('.paral__city--layer--1');
-  //   new SimpleParallax(image);
 
   return (
     <div className="paral">
       <section className="paral__logo">
         <img id="logo" src={Logo} alt="" />
-        {/* {isClick ? null : ( */}
-        {/* <a href="/#par" className="btn" onClick={handleClickBtn}>
-          <div className="btn__cont">
-            {isHover ? (
-              <div className="btn__text" onMouseEnter={handleHover}>
-                Découvrir
-              </div>
-            ) : (
-              <img
-                src={Drop}
-                alt=""
-                className="btn__drop"
-                onMouseLeave={handleHover}
-              />
-            )}
-          </div>
-        </a> */}
-        {/* )} */}
-
-        {/* {isClick ? null : 
-                <button onClick={handleClick}>Découvrir</button>
-            } */}
+        <div className="paral__logo--btn">
+          <a href="#par" alt="Merch" onClick={handleClickBtnMerch}>
+            <img src={MerchBtn} alt="" id="btnMerch" />
+          </a>
+          <a href="#par" alt="Box" onClick={handleClickBtnBox}>
+            <img src={Box} alt="" id="btnBox" />
+          </a>
+        </div>
       </section>
       <section className="espace" id="par"></section>
       <section className="paral__city">
         <div className="paral__city--layer paral__city--layer--1"></div>
         <div className="paral__city--layer paral__city--layer--2"></div>
       </section>
-      {/* <div className='container'>
-            {Data.map((data) => {
-            <Pictures id={data.id} src={data.src} title={data.title} key={data.id}/>
-
-            })}
-            </div> */}
+      {isClick ? <Merch /> : <Pictures />}
+      <a href="#main" className="backToTop">
+        <FontAwesomeIcon icon={faArrowUp} />
+      </a>
     </div>
   );
 }

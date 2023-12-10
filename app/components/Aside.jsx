@@ -25,7 +25,6 @@ export function Aside({children, heading, id = 'aside'}) {
       />
       <aside>
         <header>
-          <h3>PANIER</h3>
           <CloseAside />
         </header>
         <main>{children}</main>

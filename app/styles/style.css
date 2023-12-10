@@ -125,14 +125,14 @@ main::after {
   bottom: 0;
   top: 130vh;
   overflow: hidden scroll;
-  justify-content: center;
+  justify-items: center;
   padding-bottom: 50px;
+  max-width: unset !important;
 }
 @media screen and (min-width: 768px) {
   .container {
     top: 130vh;
     height: 150vh;
-    max-width: unset;
     padding: 0 auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -144,7 +144,7 @@ main::after {
     display: none;
   }
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1200px) {
   .container {
     top: 140vh;
     grid-template-columns: repeat(3, 1fr);
@@ -186,6 +186,68 @@ main::after {
   color: white;
 }
 
+.containerMerch {
+  width: 100%;
+}
+@media screen and (min-width: 900px) {
+  .containerMerch {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .containerMerch {
+    grid-template-columns: repeat(4, 1fr);
+    height: 100%;
+    overflow: unset;
+    max-width: 1100px;
+    padding-bottom: 10px;
+    top: 180vh;
+  }
+}
+.containerMerch .card {
+  text-align: center;
+  border: solid 1px #fff4d9;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border-radius: 20px;
+  cursor: auto;
+}
+.containerMerch .card:hover::before {
+  background-image: none;
+}
+.containerMerch .card .btn {
+  transform: scale(1.1);
+  font-size: 20px;
+  border-radius: 10px;
+  width: 80%;
+  background-color: transparent;
+  border: solid 1px #fff4d9;
+}
+.containerMerch .card .btn:hover {
+  box-shadow: 1px 1px 8px 0px grey;
+  transition: 0.3s;
+  transform: scale(1.12);
+}
+@media screen and (min-width: 768px) {
+  .containerMerch .card {
+    display: unset;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+.containerMerch .h5 {
+  font-size: 30px;
+}
+
+.card-title {
+  padding-top: 10px;
+}
+
+.card-body {
+  text-align: center;
+  border-radius: 0 0 20px 20px;
+}
+
 .paral {
   overflow: hidden;
 }
@@ -199,10 +261,38 @@ main::after {
   max-width: 300px;
   margin: 0 auto;
 }
+.paral__logo--btn {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  top: 55vh;
+  z-index: 40;
+  width: 250px;
+  margin: auto;
+}
+.paral__logo--btn a {
+  background-color: #597098;
+  border-radius: 60px;
+  padding: 10px;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 30px;
+}
+.paral__logo--btn a:hover {
+  background-color: #999982;
+  transition: 0.5s;
+}
+.paral__logo--btn #btnBox,
+.paral__logo--btn #btnMerch {
+  width: 80px;
+}
 .paral__logo #logo {
   position: fixed;
   width: 300px;
-  top: 40vh;
+  top: 35vh;
 }
 .paral__logo #logo .bottom {
   animation: toBottom 1s 1s linear forwards;
@@ -215,7 +305,7 @@ main::after {
   position: absolute;
   width: 100%;
   bottom: 0;
-  z-index: 30;
+  z-index: 50;
 }
 .paral__city--layer--1 {
   background-image: url("../images/mobile/bat1.png");
@@ -230,7 +320,7 @@ main::after {
   height: 200%;
   width: 100%;
   background-size: cover;
-  z-index: 10;
+  z-index: 40;
 }
 
 .espace {
@@ -11818,6 +11908,7 @@ textarea.form-control-lg {
 
 .footer {
   padding-bottom: 2%;
+  position: relative;
 }
 
 .videoClick {
@@ -11828,4 +11919,28 @@ textarea.form-control-lg {
 @font-face {
   font-family: "Mango";
   src: url("./MangoGrotesque-Bold.otf") format(opentype);
+}
+.backToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.57);
+  width: -moz-fit-content;
+  width: fit-content;
+  text-align: center;
+  border-radius: 20px;
+  padding: 5px 10px;
+}
+.backToTop svg {
+  width: 18px;
+}
+.backToTop:hover {
+  bottom: 21px;
+}
+
+@media screen and (min-width: 768px) {
+  .carousel {
+    height: unset !important;
+  }
 }/*# sourceMappingURL=style.css.map */
